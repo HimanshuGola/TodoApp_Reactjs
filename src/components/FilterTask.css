@@ -1,0 +1,39 @@
+.filterForm{
+  --justify-content: center;
+  --gap: 1rem;
+  border-radius: 0.35rem;
+  padding: 0;
+  font-size: 0.75rem;
+}
+
+.filterForm input[type="radio"]{
+  appearance: none;
+}
+
+.filterForm input[type="radio"] + span{
+  cursor: pointer;
+  color: var(--clr-300);
+}
+
+.filterForm input[type="radio"]:checked + span{
+  color: var(--clr-primary);
+}
+
+@media (max-width: 699px){
+  .filterForm{
+    box-shadow: 0 10px 17px 2px rgb(0 0 0 / var(--box-shadow-a));
+    padding: 0.875rem;
+  }
+}
+/* 
+@media (min-width: 600px) and (max-width: 799px){
+  .filterForm{
+    font-size: 0.825rem;
+  }
+}
+
+@media (min-width: 800px){
+  .filterForm{
+    font-size: 0.875rem;
+  }
+} */

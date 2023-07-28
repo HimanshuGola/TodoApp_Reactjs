@@ -1,0 +1,35 @@
+.addTaskForm{
+  --gap: 0.75rem;
+  --align-items: stretch;
+  border-radius: 0.35rem;
+  box-shadow: 0 10px 10px 1px rgb(0 0 0 / var(--box-shadow-a));
+  font-size: 0.75rem;
+}
+
+.addTaskForm > input{
+  flex: 1;
+  color: var(--clr-100);
+  font-weight: var(--fw-main);
+  letter-spacing: 0.65px; 
+}
+
+.addBtn{
+  width: 1.25rem;
+  aspect-ratio: 1;
+  color: var(--clr-dark-800);
+  background-image: var(--gradient);
+  border: 1px solid var(--clr-300);
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) and (max-width: 799px){
+  .addTaskForm{
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 800px){
+  .addTaskForm{
+    font-size: 0.925rem;
+  } 
+}

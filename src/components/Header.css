@@ -1,0 +1,62 @@
+h1{
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 10px;
+  font-weight: var(--fw-bolder);
+  line-height: 1.5;
+}
+
+header > label{
+  position: relative;
+}
+
+input#lightTheme{
+  cursor: pointer;
+  appearance: none;
+  /* display: none; */
+  position: relative;
+}
+
+input#lightTheme::before{
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../images/icon-moon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  top: -0.95rem;
+  left: -1.5rem;
+  right: 0;
+  bottom: 0;
+}
+
+input#lightTheme:checked::before{
+  background-image: url("../images/icon-sun.svg")
+}
+
+@media (min-width: 600px) and (max-width: 799px){
+  h1{
+    font-size: 2rem;
+    letter-spacing: 13px;
+  }
+
+  input#lightTheme::before{
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (min-width: 800px){
+  h1{
+    font-size: 2.25rem;
+    letter-spacing: 15px;
+  }
+  
+  input#lightTheme::before{
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+}

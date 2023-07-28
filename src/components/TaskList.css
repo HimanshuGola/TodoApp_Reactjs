@@ -1,0 +1,17 @@
+.taskList{
+  border-radius: 0.35rem 0.35rem 0 0;
+  overflow: hidden;
+  box-shadow: 0 10px 17px 2px rgb(0 0 0 / var(--box-shadow-a));
+}
+
+@media (max-width: 699px){
+  .taskList{
+    box-shadow: 0 70px 17px 2px rgb(0 0 0 / var(--box-shadow-a));
+  }
+}
+
+@media (min-width: 700px){
+  .taskList{
+    border-radius: 0.35rem;
+  }
+}

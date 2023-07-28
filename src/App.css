@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+:root{
+  --clr-primary: hsl(220, 98%, 61%);
+
+  --gradient: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  --clr-background: hsl(235, 21%, 11%);
+  --clr-800: hsl(235, 24%, 19%);
+
+  /* --clr-500: hsl(237, 14%, 26%); */
+  --clr-400: hsl(233, 14%, 35%);
+  --clr-300: hsl(234, 11%, 52%);
+  --clr-200: hsl(234, 39%, 85%);
+  --clr-100: hsl(236, 33%, 92%);
+
+  --editBtn-filter: invert(29%) sepia(13%) saturate(832%) hue-rotate(195deg) brightness(90%) contrast(88%);
+  --box-shadow-a: 50%;
+    
+  --ff-main: 'Josefin Sans', sans-serif;
+  --fw-main: 400;
+  --fw-bolder: 700;
+  
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root:has(#lightTheme:checked){
+  --clr-background: hsl(0, 0%, 98%);
+  
+  --clr-800: white;
+
+  --clr-400: hsl(236, 9%, 61%);
+  --clr-300: hsl(235, 19%, 35%);
+  --clr-200: hsl(235, 19%, 35%);
+  --clr-100: hsl(235, 19%, 10%);
+
+  --editBtn-filter: invert(88%) sepia(2%) saturate(1094%) hue-rotate(198deg) brightness(50%) contrast(72%);
+  --box-shadow-a: 25%;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
   min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Utilities */
+
+.flex-group{
+  --flex-direction: row;
+  --align-items: center;
+  --justify-content: space-between;
+  --gap: 0;
+  
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: var(--flex-direction);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  gap: var(--gap);
 }
 
-.App-link {
-  color: #61dafb;
+.designed-row {
+  padding: 1.25em;
+  width: 100%;
+  background-color: var(--clr-800);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Main CSS */
+
+body{
+  font-family: var(--ff-main);
+  background-color: var(--clr-background);
+}
+
+picture{
+  width: 100%;
+  object-fit: cover;
+}
+
+picture img{
+  width: 100%;
+}
+
+.main-app{
+  --gap: 1rem;
+  --flex-direction: column;
+  --align-items: stretch;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+.header-formContainer{
+  --flex-direction: column;
+  --align-items: stretch;
+  --gap: 1.5rem;
+}
+
+input{
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--clr-100);
+  caret-color: var(--clr-primary);
+  /* overflow-x: scroll; */
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) and (max-width: 799px){
+  .main-app{
+    --gap: 1.35rem;
+    top: 8%;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media (min-width: 800px){
+  .main-app {
+    --gap: 1.5rem;
+      top: 10%;
+  } 
+  
+  .header-formContainer{
+    --gap: 1.75rem;
   }
 }

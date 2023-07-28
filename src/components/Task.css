@@ -1,0 +1,18 @@
+.taskText{
+  color: var(--clr-200);
+}
+
+.taskText-EditBtn{
+  flex: 1;
+}
+
+.strike-through{
+  text-decoration: line-through;
+  color: var(--clr-300);
+}
+
+.editBtn > img{
+  filter: var(--editBtn-filter);
+  width: 1rem;
+/* filter: invert(49%) sepia(22%) saturate(340%) hue-rotate(196deg) brightness(93%) contrast(84%); */
+}
